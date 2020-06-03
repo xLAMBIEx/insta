@@ -39,11 +39,16 @@
 
     <div id="browser" class="wrap-content container">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white bg-light px-5 mb-5 pb-2 border-bottom">
-        <a class="navbar-brand mx-auto" href="index.php">
-          <img src="media/logo/logo.png" width="125" height="125" class="d-inline-block align-top" alt="">
-        </a>
-      </nav>
+      <div class="nav-wrapper mb-5 pb-4 border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white bg-light px-5 pb-2">
+          <a class="navbar-brand mx-auto" href="index.php">
+            <img src="media/logo/logo.png" width="125" height="125" class="d-inline-block align-top" alt="">
+          </a>
+        </nav>
+        <p class="text-center">
+          Buy prestigious architectural designs and plans at a fraction of the cost
+        </p>
+      </div>
 
       <!-- Filters -->
       <h4 class="text-muted">Filter Designs</h4>
