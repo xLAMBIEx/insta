@@ -20,7 +20,7 @@
     // Size filter
     if (isset($_GET['size']) && $_GET['size'] != "any") {
       $minSize = $_GET['size'];
-      $maxSize = $_GET['size'] + 100;
+      $maxSize = $_GET['size'] + 300;
       $query = addFilter($query, "(size BETWEEN '$minSize' AND '$maxSize')");
     }
 

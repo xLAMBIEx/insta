@@ -59,16 +59,9 @@
               <label for="filterSize">Size</label>
               <select class="form-control" id="filterSize">
                 <option value="any">Any</option>
-                <option value="0">0m² - 99m²</option>
-                <option value="100">100m² - 199m²</option>
-                <option value="200">200m² - 299m²</option>
-                <option value="300">300m² - 399m²</option>
-                <option value="400">400m² - 499m²</option>
-                <option value="500">500m² - 599m²</option>
-                <option value="600">600m² - 699m²</option>
-                <option value="700">700m² - 799m²</option>
-                <option value="800">800m² - 899m²</option>
-                <option value="900">900m² - 999m²</option>
+                <option value="0">0m² - 300m²</option>
+                <option value="300">300m² - 600m²</option>
+                <option value="600">600m² - 900m²</option>
               </select>
             </div>
           </div>
