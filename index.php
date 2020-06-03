@@ -20,11 +20,11 @@
     <script src="https://kit.fontawesome.com/ac23f1b380.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="intro" class="p-0 m-0 text-center">
-      <!-- Spacer -->
+    <!-- <div id="intro" class="p-0 m-0 text-center">
+       Spacer
       <div class="p-3 m-3"></div>
 
-      <!-- Navbar -->
+       Navbar
       <nav class="navbar navbar-expand-lg navbar-dark bg-white bg-light px-5">
         <a class="navbar-brand mx-auto" href="index.php">
           <img src="media/logo/logo.png" width="250" height="250" class="d-inline-block align-top" alt="Logo">
@@ -35,7 +35,7 @@
         <h1 class="text-center display-1">Welcome to Instaplan!</h1>
         <button id="browse" class="shadow btn btn-secondary d-block mx-auto pt-2 pb-2 pl-5 pr-5 mt-5">Browse Designs</button>
       </div>
-    </div>
+    </div> -->
 
     <div id="browser" class="wrap-content container">
       <!-- Navbar -->

@@ -7,13 +7,13 @@ var formatter = new Intl.NumberFormat('en-ZA', {
 
 $(document).ready(function () {
   // Home Page - Initialize UI
-  $("#browser").hide();
+  // $("#browser").hide();
 
   // Home Page - Hide Welcome & Show Browser
-  $("#browse").click(function () {
-    $("#intro").hide();
-    $("#browser").show();
-  })
+  // $("#browse").click(function () {
+  //   $("#intro").hide();
+  //   $("#browser").show();
+  // })
 
   // Admin Dahsboard - Hide image Messages
   $("#uploadFeaturedImageMsg").hide();
