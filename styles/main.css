@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#intro {
+  height: 98vh;
+  background-image: url("http://etrade.capitalbancorpng.com/wp-content/uploads/2018/03/GridFading.png");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.carousel {
+  background: white;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 300px;
+  margin-right: 20px;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 300px;
+  }
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel.is-fullscreen .basic-info {
+  display: none;
+}
+.carousel.is-fullscreen .details {
+  display: none;
+}
+
+.listings .carousel {
+  background: white;
+}
+
+.listings .carousel-cell {
+  width: 100%;
+  height: 300px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listings .carousel-cell img {
+  display: block;
+  height: 150px;
+}
+
+@media screen and ( max-width: 768px ) {
+  #intro {
+    background-size: auto;
+  }
+  #intro .display-1 {
+    font-size: 32px !important;
+  }
+  nav {
+    padding: 0px !important;
+  }
+}
+
+@media screen and ( min-width: 768px ) {
+  .listings .carousel-cell img {
+    height: 200px;
+  }
+}
+
+.listings .carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.listings .flickity-page-dots {
+  display: none;
+}
+
+.listings .flickity-fullscreen-button {
+  display: none;
+}
+
+.btn-secondary {
+  background: #333;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btn-secondary:hover {
+  background: white;
+  color: #333;
+  border: 1px solid  #333;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btn-secondary:target {
+    background-color:yellow;
+}
+.btn-secondary i {
+  font-size: 18px;
+}
+
+.btn-success {
+  background: #333;
+  color: white;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  border-left: 2px solid #333;
+  border-bottom: none;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btn-success:hover {
+  background: none;
+  color: #333;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  border-left: 2px solid #333;
+}
+
+.filter {
+  border-bottom: 2px solid #333;
+}
+
+.listings .btn-success {
+  border: 2px solid #333;
+}
+
+.table-dark {
+  background-color: #333;
+}
+
+.filter label {
+  color: #333;
+}
+.filter select {
+  border-radius: 0px;
+  border: 1px solid #333;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrap-content {
+    padding: 10px !important;
+  }
+  .selected-listing h2 {
+    text-align: center;
+  }
+  .selected-listing p {
+    display: none;
+  }
+  .selected-listing .social {
+    display: none;
+  }
+  .buy-now {
+    margin-bottom: 25px;
+  }
+  .text-smaller {
+    font-size: 20px !important;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-color: white;
+  color: #333;
+  width: 550px;
+  height: auto;
+  padding: 5px;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left {
+  background: none;
+}
+.swiper-container-3d .swiper-slide-shadow-right {
+  background: none;
+}
+
+.basic-info {
+  background-color: rgba(0,0,0, 0.5);
+  color: white;
+  padding: 15px;
+  height: auto;
+}
+
+.jumbotron {
+  background-color: #f8f9fa;
+}
+
+.nav-link {
+  color: #333;
+}
+.nav-link:hover {
+  color: #111;
+}
+
+.nav-link.active {
+  background-color: #333 !important;
+  color: white;
+}
+
+@media only screen and (max-width: 700px) {
+  .dashboard-menu {
+    display: none !important;
+  }
+ .dashboard-mobile-menu {
+   display: block !important;
+ }
+}
