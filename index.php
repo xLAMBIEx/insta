@@ -102,7 +102,7 @@
           </div>
           <div class="col-md-2">
             <div class="form-group">
-              <label for="filterWidth">Width</label>
+              <label for="filterWidth">Plan Width</label>
               <select class="form-control" id="filterWidth">
                 <option value="any">Any</option>
                 <option value="15">15m - 20m</option>
@@ -110,7 +110,7 @@
                 <option value="25">25m - 30m</option>
                 <option value="30">30m - 35m</option>
                 <option value="35">35m - 40m</option>
-                <option value="40">40m - 45m</option>
+                <!-- <option value="40">40m - 45m</option>
                 <option value="45">45m - 50m</option>
                 <option value="50">50m - 55m</option>
                 <option value="55">55m - 60m</option>
@@ -126,7 +126,7 @@
                 <option value="105">105m - 110m</option>
                 <option value="110">110m - 115m</option>
                 <option value="115">115m - 120m</option>
-                <option value="120">120m - 125m</option>
+                <option value="120">120m - 125m</option> -->
               </select>
             </div>
           </div>
