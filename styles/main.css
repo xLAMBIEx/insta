@@ -197,6 +197,20 @@ body {
 	padding: 5px;
 }
 
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+	font-weight: 900 !important;
+	font-size: 75px !important;
+	color: white !important;
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+	font-weight: 900 !important;
+	font-size: 75px !important;
+	color: white !important;
+}
+
 .swiper-container-3d .swiper-slide-shadow-left {
 	background: none;
 }
