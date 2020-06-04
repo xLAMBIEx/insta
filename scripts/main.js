@@ -363,9 +363,11 @@ function getFilteredDesigns() {
               <h5 class="text-center">` +
 							value.title +
 							`</h5>
-              <img src="media/designs/` +
+              <a id="` +
+							value.id +
+							`"class="view-details"><img src="media/designs/` +
 							value.featuredImage +
-							`.jpg" class="img-fluid" alt="Design Featured Image" />
+							`.jpg" class="img-fluid" alt="Design Featured Image" /></a>
               <h3 class="text-left m-3 text-smaller">
                 ` +
 							formatter.format(value.price) +
