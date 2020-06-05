@@ -4,6 +4,7 @@
   if (isset($_POST['designId']) && !empty($_POST['designId']) &&
       isset($_POST['title']) && !empty($_POST['title']) &&
       isset($_POST['description']) && !empty($_POST['description']) &&
+      isset($_POST['including']) && !empty($_POST['including']) &&
       isset($_POST['size']) && !empty($_POST['size']) &&
       isset($_POST['bedrooms']) && !empty($_POST['bedrooms']) &&
       isset($_POST['bathrooms']) && !empty($_POST['bathrooms']) &&
@@ -24,6 +25,7 @@
         $designId = $_POST['designId'];
         $title = $_POST['title'];
         $description = $_POST['description'];
+        $including = $_POST['including'];
         $size = $_POST['size'];
         $bedrooms = $_POST['bedrooms'];
         $bathrooms = $_POST['bathrooms'];
@@ -41,8 +43,8 @@
         $image2 = $_POST['image2'];
         $image3 = $_POST['image3'];
 
-        $stmt = $db->prepare("UPDATE designs SET title=?, description=?, size=?, bedrooms=?, bathrooms=?, floors=?, garage=?, kitchen=?, lounge=?, dining=?, patio=?, width=?, depth=?, price=?, featuredImage=?, image1=?, image2=?, image3=? WHERE id=?");
-        $stmt->bind_param("ssiiiiiiiiiiidssssi", $title, $description, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $featuredImage, $image1, $image2, $image3, $designId);
+        $stmt = $db->prepare("UPDATE designs SET title=?, description=?, including=?, size=?, bedrooms=?, bathrooms=?, floors=?, garage=?, kitchen=?, lounge=?, dining=?, patio=?, width=?, depth=?, price=?, featuredImage=?, image1=?, image2=?, image3=? WHERE id=?");
+        $stmt->bind_param("sssiiiiiiiiiiidssssi", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $featuredImage, $image1, $image2, $image3, $designId);
 
         $stmt->execute();
 
