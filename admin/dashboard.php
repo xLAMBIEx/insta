@@ -64,6 +64,10 @@
                   <label for="addDesignDescription">Description</label>
                   <textarea class="form-control" id="addDesignDescription" rows="4" cols="40"></textarea>
                 </div>
+                <div class="form-group">
+                  <label for="addDesignIncluding">Including</label>
+                  <textarea class="form-control" id="addDesignIncluding" rows="2" cols="40"></textarea>
+                </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="addDesignSize">Size</label>

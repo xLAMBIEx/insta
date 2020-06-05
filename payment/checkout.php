@@ -30,7 +30,7 @@
       'm_payment_id' => '1212',
       'amount' => number_format( sprintf( "%.2f", $cartTotal ), 2, '.', '' ),
       'item_name' => $result["title"],
-      'item_description' => $result["description"],
+      'item_description' => $result["including"],
       'custom_int1' => '2121',
       'custom_str1' => 'Instaplan Payment'
   );
@@ -73,7 +73,7 @@
       </nav>
 
       <!-- Spacer -->
-      <div class="m-2 p-2"></div>
+      <!-- <div class="m-1 p-1"></div> -->
 
       <div class="row my-5">
         <div class="col-md-3"></div>
@@ -102,7 +102,7 @@
           <h2 class="text-center">R <?php echo $data['amount']; ?></h2>
           <label class="d-block text-center text-muted"><?php echo $data['item_name']; ?></label>
           <p class="text-center text-muted">
-            <?php // echo $data['including']; ?>
+            <strong>Including:</strong> <?php echo $data['item_description']; ?>
           </p>
           <hr>
 

@@ -172,6 +172,7 @@ $(document).ready(function () {
 
 		$("#addDesignTitle").val("");
 		$("#addDesignDescription").val("");
+		$("#addDesignIncluding").val("");
 		$("#addDesignSize").val("");
 		$("#addDesignBedrooms").val("");
 		$("#addDesignBathrooms").val("");
@@ -209,6 +210,7 @@ $(document).ready(function () {
 
 		$("#addDesignTitle").val("");
 		$("#addDesignDescription").val("");
+		$("#addDesignIncluding").val("");
 		$("#addDesignSize").val("");
 		$("#addDesignBedrooms").val("");
 		$("#addDesignBathrooms").val("");
@@ -440,6 +442,10 @@ function getDesignDetails(id) {
 				$("#designDetailsDining").text(res.dining);
 				$("#designDetailsPatio").text(res.patio);
 
+				$("#designDetailsIncluding").html(
+					"<strong>Including:</strong> " + res.including
+				);
+
 				$("#designDetailsBuy").attr(
 					"href",
 					"payment/checkout.php?did=" + res.id
@@ -506,6 +512,7 @@ function getDesigns() {
 function addDesign() {
 	let title = $("#addDesignTitle").val();
 	let description = $("#addDesignDescription").val();
+	let including = $("#addDesignIncluding").val();
 	let size = $("#addDesignSize").val();
 	let bedrooms = $("#addDesignBedrooms").val();
 	let bathrooms = $("#addDesignBathrooms").val();
@@ -529,6 +536,7 @@ function addDesign() {
 		data: {
 			title: title,
 			description: description,
+			including: including,
 			size: size,
 			bedrooms: bedrooms,
 			bathrooms: bathrooms,
@@ -550,6 +558,7 @@ function addDesign() {
 			if (res === "Design Added") {
 				$("#addDesignTitle").val("");
 				$("#addDesignDescription").val("");
+				$("#addDesignIncluding").val("");
 				$("#addDesignSize").val("");
 				$("#addDesignBedrooms").val("");
 				$("#addDesignBathrooms").val("");
@@ -623,6 +632,7 @@ function getAdminDesignDetails(id) {
 
 			$("#addDesignTitle").val(res.title);
 			$("#addDesignDescription").val(res.description);
+			$("#addDesignIncluding").val(res.including);
 			$("#addDesignSize").val(res.size);
 			$("#addDesignBedrooms").val(res.bedrooms);
 			$("#addDesignBathrooms").val(res.bathrooms);
@@ -663,6 +673,7 @@ function updateDesign() {
 	const id = $("#updateDesignId").val();
 	let title = $("#addDesignTitle").val();
 	let description = $("#addDesignDescription").val();
+	let including = $("#addDesignIncluding").val();
 	let size = $("#addDesignSize").val();
 	let bedrooms = $("#addDesignBedrooms").val();
 	let bathrooms = $("#addDesignBathrooms").val();
@@ -687,6 +698,7 @@ function updateDesign() {
 			designId: id,
 			title: title,
 			description: description,
+			including: including,
 			size: size,
 			bedrooms: bedrooms,
 			bathrooms: bathrooms,

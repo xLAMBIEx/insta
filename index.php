@@ -405,6 +405,10 @@
                 </tr>
               </tbody>
             </table>
+
+            <p id="designDetailsIncluding" class="text-center mt-4 mb-5">
+              <!-- AJAX Placeholder -->
+            </p>
           </div>
           <div class="modal-footer">
             <a id="designDetailsBuy" href="#" class="btn btn-secondary btn-block">Buy Now</a>
