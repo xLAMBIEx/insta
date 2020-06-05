@@ -428,8 +428,9 @@
             </button>
           </div>
           <div class="modal-body">
-            <h4 class="text-center">+27(0)12 809 1517</h4>
-            <h4 class="text-center">info@instaplan.co.za</h4>
+            <h4 class="text-center">
+              <a href="mailto:support@instaplan.co.za">support@instaplan.co.za</a>
+            </h4>
 
             <hr class="mt-4 mb-4 border">
 
