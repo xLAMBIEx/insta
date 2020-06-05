@@ -102,7 +102,8 @@
             <br><br>
             <i>Contact Us</i>
             <br><br>
-            Should any further queries arise about our Privacy Policy please contact us (email) or (phone)
+            Should any further queries arise about our Privacy Policy please contact us
+            <a href="mailto:support@instaplan.co.za">support@instaplan.co.za</a>.
           </p>
         </div>
         <div class="col-md-2"></div>

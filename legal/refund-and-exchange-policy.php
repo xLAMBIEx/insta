@@ -71,8 +71,8 @@
             <br><br>
             <i>Contact us</i>
             <br><br>
-            Should any further queries arise about our refund and exchange policy please contact us (email)
-            or (phone)
+            Should any further queries arise about our refund and exchange policy please contact us
+            <a href="mailto:support@instaplan.co.za">support@instaplan.co.za</a>.
           </p>
         </div>
         <div class="col-md-2"></div>
