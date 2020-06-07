@@ -106,6 +106,11 @@
           </p>
           <hr>
 
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="acceptCheckbox">
+            <label class="form-check-label" for="acceptCheckbox">Accept Terms and Conditions, Privacy Policy and Refund Policy</label>
+          </div>
+
           <?php
             $testingMode = false;
             $pfHost = $testingMode ? 'sandbox.payfast.co.za' : 'www.payfast.co.za';
@@ -114,7 +119,7 @@
             {
               $htmlForm .= '<input name="'.$name.'" type="hidden" value="'.$value.'" />';
             }
-            $htmlForm .= '<input class="btn btn-block btn-outline-secondary mt-4" type="submit" value="Pay Now" /></form>';
+            $htmlForm .= '<input id="accepted" class="btn btn-block btn-outline-secondary mt-2" type="submit" value="Pay Now" disabled /></form>';
             echo $htmlForm;
           ?>
 

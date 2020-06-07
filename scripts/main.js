@@ -329,6 +329,12 @@ $(document).ready(function () {
 			},
 		});
 	});
+
+	// Payment Checkout - Accept Toggle
+	$("#acceptCheckbox").change(function () {
+		var isChecked = this.checked;
+		$("#accepted").prop("disabled", !isChecked);
+	});
 }); // End Document.Ready
 
 // Home Page - Get All/Filtered Designs
