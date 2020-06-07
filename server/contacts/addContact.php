@@ -32,12 +32,14 @@
         //Recipients
         $mail->setFrom('noreply@instaplan.co.za', 'Instaplan');
 
-        $query = "SELECT * FROM users";
-        $admins = $db->query($query);
+        $mail->addAddress('support@instaplan.co.za', 'Support');
 
-        while ($a = $admins->fetch_assoc()) {
-          $mail->addAddress($a['email'], 'Instplan Admin User');
-        }
+        // $query = "SELECT * FROM users";
+        // $admins = $db->query($query);
+
+        // while ($a = $admins->fetch_assoc()) {
+        //   $mail->addAddress($a['email'], 'Instplan Admin User');
+        // }
 
         $mail->addReplyTo('noreply@instaplan.co.za', 'No Reply');
 
