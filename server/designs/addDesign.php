@@ -20,7 +20,16 @@
       isset($_POST['featuredImage']) && !empty($_POST['featuredImage']) &&
       isset($_POST['image1']) && !empty($_POST['image1']) &&
       isset($_POST['image2']) && !empty($_POST['image2']) &&
-      isset($_POST['image3']) && !empty($_POST['image3'])) {
+      isset($_POST['image3']) && !empty($_POST['image3']) &&
+      isset($_POST['image4']) && !empty($_POST['image4']) &&
+      isset($_POST['image5']) && !empty($_POST['image5']) &&
+      isset($_POST['image6']) && !empty($_POST['image6']) &&
+      isset($_POST['image7']) && !empty($_POST['image7']) &&
+      isset($_POST['image8']) && !empty($_POST['image8']) &&
+      isset($_POST['image9']) && !empty($_POST['image9']) &&
+      isset($_POST['image10']) && !empty($_POST['image10']) &&
+      isset($_POST['image11']) && !empty($_POST['image11']) &&
+      isset($_POST['image12']) && !empty($_POST['image12'])) {
 
         $title = $_POST['title'];
         $description = $_POST['description'];
@@ -42,9 +51,18 @@
         $image1 = $_POST['image1'];
         $image2 = $_POST['image2'];
         $image3 = $_POST['image3'];
+        $image4 = $_POST['image4'];
+        $image5 = $_POST['image5'];
+        $image6 = $_POST['image6'];
+        $image7 = $_POST['image7'];
+        $image8 = $_POST['image8'];
+        $image9 = $_POST['image9'];
+        $image10 = $_POST['image10'];
+        $image11 = $_POST['image11'];
+        $image12 = $_POST['image12'];
 
-        $stmt = $db->prepare("INSERT INTO designs(title, description, including, size, bedrooms, bathrooms, floors, garage, kitchen, lounge, dining, patio, width, depth, price, discount, featuredImage, image1, image2, image3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssiiiiiiiiiiidsssss", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $discount, $featuredImage, $image1, $image2, $image3);
+        $stmt = $db->prepare("INSERT INTO designs(title, description, including, size, bedrooms, bathrooms, floors, garage, kitchen, lounge, dining, patio, width, depth, price, discount, featuredImage, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssiiiiiiiiiiidssssssssssssss", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $discount, $featuredImage, $image1, $image2, $image3, $image4, $image5, $image6, $image7, $image8, $image9, $image10, $image11, $image12);
 
         $stmt->execute();
 

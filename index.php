@@ -316,6 +316,15 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -326,6 +335,33 @@
                 </div>
                 <div class="carousel-item">
                   <img id="designDetailsGalleryImage3" src="" class="d-block w-100" alt="Design Gallery Image 3">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage4" src="" class="d-block w-100" alt="Design Gallery Image 4">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage5" src="" class="d-block w-100" alt="Design Gallery Image 5">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage6" src="" class="d-block w-100" alt="Design Gallery Image 6">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage7" src="" class="d-block w-100" alt="Design Gallery Image 7">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage8" src="" class="d-block w-100" alt="Design Gallery Image 8">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage9" src="" class="d-block w-100" alt="Design Gallery Image 9">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage10" src="" class="d-block w-100" alt="Design Gallery Image 10">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage11" src="" class="d-block w-100" alt="Design Gallery Image 11">
+                </div>
+                <div class="carousel-item">
+                  <img id="designDetailsGalleryImage12" src="" class="d-block w-100" alt="Design Gallery Image 12">
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

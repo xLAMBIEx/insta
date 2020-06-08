@@ -161,6 +161,66 @@
                     <div id="addDesignGalleryImage3" hidden></div>
                   </div>
                 </div>
+                <div class="form-row mt-4">
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage4">Gallery Image 4</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage4">
+                    <p id="uploadGalleryImage4Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage4" hidden></div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage5">Gallery Image 5</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage5">
+                    <p id="uploadGalleryImage5Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage5" hidden></div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage6">Gallery Image 6</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage6">
+                    <p id="uploadGalleryImage6Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage6" hidden></div>
+                  </div>
+                </div>
+                <div class="form-row mt-4">
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage7">Gallery Image 7</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage7">
+                    <p id="uploadGalleryImage7Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage7" hidden></div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage8">Gallery Image 8</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage8">
+                    <p id="uploadGalleryImage8Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage8" hidden></div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage9">Gallery Image 9</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage9">
+                    <p id="uploadGalleryImage9Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage9" hidden></div>
+                  </div>
+                </div>
+                <div class="form-row mt-4">
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage10">Gallery Image 10</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage10">
+                    <p id="uploadGalleryImage10Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage10" hidden></div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage11">Gallery Image 11</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage11">
+                    <p id="uploadGalleryImage11Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage11" hidden></div>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="uploadGalleryImage12">Gallery Image 12</label>
+                    <input type="file" class="form-control-file" id="uploadGalleryImage12">
+                    <p id="uploadGalleryImage12Msg" class="mt-2">Loading...</p>
+                    <div id="addDesignGalleryImage12" hidden></div>
+                  </div>
+                </div>
                 <p class="text-center text-muted mt-3">Please note only the <strong>.JPG</strong> image format is currently supported!</p>
               </form>
               <button id="addDesignSave" type="button" class="btn btn-block btn-secondary mt-5">Save</button>

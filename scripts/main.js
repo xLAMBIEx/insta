@@ -20,6 +20,15 @@ $(document).ready(function () {
 	$("#uploadGalleryImage1Msg").hide();
 	$("#uploadGalleryImage2Msg").hide();
 	$("#uploadGalleryImage3Msg").hide();
+	$("#uploadGalleryImage4Msg").hide();
+	$("#uploadGalleryImage5Msg").hide();
+	$("#uploadGalleryImage6Msg").hide();
+	$("#uploadGalleryImage7Msg").hide();
+	$("#uploadGalleryImage8Msg").hide();
+	$("#uploadGalleryImage9Msg").hide();
+	$("#uploadGalleryImage10Msg").hide();
+	$("#uploadGalleryImage11Msg").hide();
+	$("#uploadGalleryImage12Msg").hide();
 
 	// Admin Dashboard - Hide User Update, Cancel
 	$("#updateDesignSubmit").hide();
@@ -147,6 +156,60 @@ $(document).ready(function () {
 		uploadImage("uploadGalleryImage3", "addDesignGalleryImage3");
 	});
 
+	// Admin Dashboard - Upload Gallery Image 4
+	$(document).on("change", "#uploadGalleryImage4", function () {
+		$("#uploadGalleryImage4Msg").show();
+		uploadImage("uploadGalleryImage4", "addDesignGalleryImage4");
+	});
+
+	// Admin Dashboard - Upload Gallery Image 5
+	$(document).on("change", "#uploadGalleryImage5", function () {
+		$("#uploadGalleryImage5Msg").show();
+		uploadImage("uploadGalleryImage5", "addDesignGalleryImage5");
+	});
+
+	// Admin Dashboard - Upload Gallery Image 6
+	$(document).on("change", "#uploadGalleryImage6", function () {
+		$("#uploadGalleryImage6Msg").show();
+		uploadImage("uploadGalleryImage6", "addDesignGalleryImage6");
+	});
+
+	// Admin Dashboard - Upload Gallery Image 7
+	$(document).on("change", "#uploadGalleryImage7", function () {
+		$("#uploadGalleryImage7Msg").show();
+		uploadImage("uploadGalleryImage7", "addDesignGalleryImage7");
+	});
+
+	// Admin Dashboard - Upload Gallery Image 8
+	$(document).on("change", "#uploadGalleryImage8", function () {
+		$("#uploadGalleryImage8Msg").show();
+		uploadImage("uploadGalleryImage8", "addDesignGalleryImage8");
+	});
+
+	// Admin Dashboard - Upload Gallery Image 9
+	$(document).on("change", "#uploadGalleryImage9", function () {
+		$("#uploadGalleryImage9Msg").show();
+		uploadImage("uploadGalleryImage9", "addDesignGalleryImage9");
+	});
+
+	// Admin Dashboard - Upload Gallery Image 10
+	$(document).on("change", "#uploadGalleryImage10", function () {
+		$("#uploadGalleryImage10Msg").show();
+		uploadImage("uploadGalleryImage10", "addDesignGalleryImage10");
+	});
+
+	// Admin Dashboard - Upload Gallery Image 11
+	$(document).on("change", "#uploadGalleryImage11", function () {
+		$("#uploadGalleryImage11Msg").show();
+		uploadImage("uploadGalleryImage11", "addDesignGalleryImage11");
+	});
+
+	// Admin Dashboard - Upload Gallery Image 12
+	$(document).on("change", "#uploadGalleryImage12", function () {
+		$("#uploadGalleryImage12Msg").show();
+		uploadImage("uploadGalleryImage12", "addDesignGalleryImage12");
+	});
+
 	// Admin Dashboard - Edit Design
 	$(document).on("click", ".edit-design", function () {
 		let id = $(this).attr("id");
@@ -194,11 +257,38 @@ $(document).ready(function () {
 		$("#uploadGalleryImage2").val("");
 		$("#addDesignGalleryImage3").text("");
 		$("#uploadGalleryImage3").val("");
+		$("#addDesignGalleryImage4").text("");
+		$("#uploadGalleryImage4").val("");
+		$("#addDesignGalleryImage5").text("");
+		$("#uploadGalleryImage5").val("");
+		$("#addDesignGalleryImage6").text("");
+		$("#uploadGalleryImage6").val("");
+		$("#addDesignGalleryImage7").text("");
+		$("#uploadGalleryImage7").val("");
+		$("#addDesignGalleryImage8").text("");
+		$("#uploadGalleryImage8").val("");
+		$("#addDesignGalleryImage9").text("");
+		$("#uploadGalleryImage9").val("");
+		$("#addDesignGalleryImage10").text("");
+		$("#uploadGalleryImage10").val("");
+		$("#addDesignGalleryImage11").text("");
+		$("#uploadGalleryImage11").val("");
+		$("#addDesignGalleryImage12").text("");
+		$("#uploadGalleryImage12").val("");
 
 		$("#uploadFeaturedImageMsg").text("Loading...").hide();
 		$("#uploadGalleryImage1Msg").text("Loading...").hide();
 		$("#uploadGalleryImage2Msg").text("Loading...").hide();
 		$("#uploadGalleryImage3Msg").text("Loading...").hide();
+		$("#uploadGalleryImage4Msg").text("Loading...").hide();
+		$("#uploadGalleryImage5Msg").text("Loading...").hide();
+		$("#uploadGalleryImage6Msg").text("Loading...").hide();
+		$("#uploadGalleryImage7Msg").text("Loading...").hide();
+		$("#uploadGalleryImage8Msg").text("Loading...").hide();
+		$("#uploadGalleryImage9Msg").text("Loading...").hide();
+		$("#uploadGalleryImage10Msg").text("Loading...").hide();
+		$("#uploadGalleryImage11Msg").text("Loading...").hide();
+		$("#uploadGalleryImage12Msg").text("Loading...").hide();
 	});
 
 	// Admin Dashboard - Update Design Cancel
@@ -233,11 +323,38 @@ $(document).ready(function () {
 		$("#uploadGalleryImage2").val("");
 		$("#addDesignGalleryImage3").text("");
 		$("#uploadGalleryImage3").val("");
+		$("#addDesignGalleryImage4").text("");
+		$("#uploadGalleryImage4").val("");
+		$("#addDesignGalleryImage5").text("");
+		$("#uploadGalleryImage5").val("");
+		$("#addDesignGalleryImage6").text("");
+		$("#uploadGalleryImage6").val("");
+		$("#addDesignGalleryImage7").text("");
+		$("#uploadGalleryImage7").val("");
+		$("#addDesignGalleryImage8").text("");
+		$("#uploadGalleryImage8").val("");
+		$("#addDesignGalleryImage9").text("");
+		$("#uploadGalleryImage9").val("");
+		$("#addDesignGalleryImage10").text("");
+		$("#uploadGalleryImage10").val("");
+		$("#addDesignGalleryImage11").text("");
+		$("#uploadGalleryImage11").val("");
+		$("#addDesignGalleryImage12").text("");
+		$("#uploadGalleryImage12").val("");
 
 		$("#uploadFeaturedImageMsg").text("Loading...").hide();
 		$("#uploadGalleryImage1Msg").text("Loading...").hide();
 		$("#uploadGalleryImage2Msg").text("Loading...").hide();
 		$("#uploadGalleryImage3Msg").text("Loading...").hide();
+		$("#uploadGalleryImage4Msg").text("Loading...").hide();
+		$("#uploadGalleryImage5Msg").text("Loading...").hide();
+		$("#uploadGalleryImage6Msg").text("Loading...").hide();
+		$("#uploadGalleryImage7Msg").text("Loading...").hide();
+		$("#uploadGalleryImage8Msg").text("Loading...").hide();
+		$("#uploadGalleryImage9Msg").text("Loading...").hide();
+		$("#uploadGalleryImage10Msg").text("Loading...").hide();
+		$("#uploadGalleryImage11Msg").text("Loading...").hide();
+		$("#uploadGalleryImage12Msg").text("Loading...").hide();
 	});
 
 	// Admin Dashboard - Delete Design
@@ -437,6 +554,42 @@ function getDesignDetails(id) {
 					"src",
 					"media/designs/" + res.image3 + ".jpg"
 				);
+				$("#designDetailsGalleryImage4").attr(
+					"src",
+					"media/designs/" + res.image4 + ".jpg"
+				);
+				$("#designDetailsGalleryImage5").attr(
+					"src",
+					"media/designs/" + res.image5 + ".jpg"
+				);
+				$("#designDetailsGalleryImage6").attr(
+					"src",
+					"media/designs/" + res.image6 + ".jpg"
+				);
+				$("#designDetailsGalleryImage7").attr(
+					"src",
+					"media/designs/" + res.image7 + ".jpg"
+				);
+				$("#designDetailsGalleryImage8").attr(
+					"src",
+					"media/designs/" + res.image8 + ".jpg"
+				);
+				$("#designDetailsGalleryImage9").attr(
+					"src",
+					"media/designs/" + res.image9 + ".jpg"
+				);
+				$("#designDetailsGalleryImage10").attr(
+					"src",
+					"media/designs/" + res.image10 + ".jpg"
+				);
+				$("#designDetailsGalleryImage11").attr(
+					"src",
+					"media/designs/" + res.image11 + ".jpg"
+				);
+				$("#designDetailsGalleryImage12").attr(
+					"src",
+					"media/designs/" + res.image12 + ".jpg"
+				);
 
 				$("#designDetailsTitle").text(res.title);
 				$("#designDetailsPrice").text(formatter.format(res.price));
@@ -540,6 +693,15 @@ function addDesign() {
 	let image1 = $("#addDesignGalleryImage1").text();
 	let image2 = $("#addDesignGalleryImage2").text();
 	let image3 = $("#addDesignGalleryImage3").text();
+	let image4 = $("#addDesignGalleryImage4").text();
+	let image5 = $("#addDesignGalleryImage5").text();
+	let image6 = $("#addDesignGalleryImage6").text();
+	let image7 = $("#addDesignGalleryImage7").text();
+	let image8 = $("#addDesignGalleryImage8").text();
+	let image9 = $("#addDesignGalleryImage9").text();
+	let image10 = $("#addDesignGalleryImage10").text();
+	let image11 = $("#addDesignGalleryImage11").text();
+	let image12 = $("#addDesignGalleryImage12").text();
 
 	$.ajax({
 		url: "../server/designs/addDesign.php",
@@ -565,6 +727,15 @@ function addDesign() {
 			image1: image1,
 			image2: image2,
 			image3: image3,
+			image4: image4,
+			image5: image5,
+			image6: image6,
+			image7: image7,
+			image8: image8,
+			image9: image9,
+			image10: image10,
+			image11: image11,
+			image12: image12,
 		},
 		success: function (res) {
 			if (res === "Design Added") {
@@ -592,11 +763,38 @@ function addDesign() {
 				$("#uploadGalleryImage2").val("");
 				$("#addDesignGalleryImage3").text("");
 				$("#uploadGalleryImage3").val("");
+				$("#addDesignGalleryImage4").text("");
+				$("#uploadGalleryImage4").val("");
+				$("#addDesignGalleryImage5").text("");
+				$("#uploadGalleryImage5").val("");
+				$("#addDesignGalleryImage6").text("");
+				$("#uploadGalleryImage6").val("");
+				$("#addDesignGalleryImage7").text("");
+				$("#uploadGalleryImage7").val("");
+				$("#addDesignGalleryImage8").text("");
+				$("#uploadGalleryImage8").val("");
+				$("#addDesignGalleryImage9").text("");
+				$("#uploadGalleryImage9").val("");
+				$("#addDesignGalleryImage10").text("");
+				$("#uploadGalleryImage10").val("");
+				$("#addDesignGalleryImage11").text("");
+				$("#uploadGalleryImage11").val("");
+				$("#addDesignGalleryImage12").text("");
+				$("#uploadGalleryImage12").val("");
 
 				$("#uploadFeaturedImageMsg").text("Loading...").hide();
 				$("#uploadGalleryImage1Msg").text("Loading...").hide();
 				$("#uploadGalleryImage2Msg").text("Loading...").hide();
 				$("#uploadGalleryImage3Msg").text("Loading...").hide();
+				$("#uploadGalleryImage4Msg").text("Loading...").hide();
+				$("#uploadGalleryImage5Msg").text("Loading...").hide();
+				$("#uploadGalleryImage6Msg").text("Loading...").hide();
+				$("#uploadGalleryImage7Msg").text("Loading...").hide();
+				$("#uploadGalleryImage8Msg").text("Loading...").hide();
+				$("#uploadGalleryImage9Msg").text("Loading...").hide();
+				$("#uploadGalleryImage10Msg").text("Loading...").hide();
+				$("#uploadGalleryImage11Msg").text("Loading...").hide();
+				$("#uploadGalleryImage12Msg").text("Loading...").hide();
 			}
 			getDesigns();
 		},
@@ -663,6 +861,16 @@ function getAdminDesignDetails(id) {
 			$("#addDesignGalleryImage1").text(res.image1);
 			$("#addDesignGalleryImage2").text(res.image2);
 			$("#addDesignGalleryImage3").text(res.image3);
+			$("#addDesignGalleryImage4").text(res.image4);
+			$("#addDesignGalleryImage5").text(res.image5);
+			$("#addDesignGalleryImage6").text(res.image6);
+			$("#addDesignGalleryImage7").text(res.image7);
+			$("#addDesignGalleryImage8").text(res.image8);
+			$("#addDesignGalleryImage9").text(res.image9);
+			$("#addDesignGalleryImage10").text(res.image10);
+			$("#addDesignGalleryImage11").text(res.image11);
+			$("#addDesignGalleryImage12").text(res.image12);
+
 			$("#uploadFeaturedImageMsg")
 				.text(res.featuredImage + ".jpg uploaded")
 				.show();
@@ -674,6 +882,33 @@ function getAdminDesignDetails(id) {
 				.show();
 			$("#uploadGalleryImage3Msg")
 				.text(res.image3 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage4Msg")
+				.text(res.image4 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage5Msg")
+				.text(res.image5 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage6Msg")
+				.text(res.image6 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage7Msg")
+				.text(res.image7 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage8Msg")
+				.text(res.image8 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage9Msg")
+				.text(res.image9 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage10Msg")
+				.text(res.image10 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage11Msg")
+				.text(res.image11 + ".jpg uploaded")
+				.show();
+			$("#uploadGalleryImage12Msg")
+				.text(res.image12 + ".jpg uploaded")
 				.show();
 		},
 		error: function (err) {
@@ -705,6 +940,15 @@ function updateDesign() {
 	let image1 = $("#addDesignGalleryImage1").text();
 	let image2 = $("#addDesignGalleryImage2").text();
 	let image3 = $("#addDesignGalleryImage3").text();
+	let image4 = $("#addDesignGalleryImage4").text();
+	let image5 = $("#addDesignGalleryImage5").text();
+	let image6 = $("#addDesignGalleryImage6").text();
+	let image7 = $("#addDesignGalleryImage7").text();
+	let image8 = $("#addDesignGalleryImage8").text();
+	let image9 = $("#addDesignGalleryImage9").text();
+	let image10 = $("#addDesignGalleryImage10").text();
+	let image11 = $("#addDesignGalleryImage11").text();
+	let image12 = $("#addDesignGalleryImage12").text();
 
 	$.ajax({
 		url: "../server/designs/updateDesign.php",
@@ -731,6 +975,15 @@ function updateDesign() {
 			image1: image1,
 			image2: image2,
 			image3: image3,
+			image4: image4,
+			image5: image5,
+			image6: image6,
+			image7: image7,
+			image8: image8,
+			image9: image9,
+			image10: image10,
+			image11: image11,
+			image12: image12,
 		},
 		success: function (res) {
 			if (res === "Design Updated") {
