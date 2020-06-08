@@ -21,6 +21,17 @@
 
   $cartTotal = $result["price"];
 
+  $discount = false;
+  $discountText = '';
+
+  if ($result['discount'] === "yes") {
+    $discount = true;
+    $discountText = ' (15% Discount)';
+
+    $originalAmount = $cartTotal;
+    $cartTotal = $cartTotal * ((100-15) / 100);
+  }
+
   $data = array(
       'merchant_id' => '15192334',
       'merchant_key' => 'm7b9w2gadc2ai',
@@ -29,7 +40,7 @@
       'notify_url' => 'https://www.instaplan.co.za/payment/itn.php',
       'm_payment_id' => '1212',
       'amount' => number_format( sprintf( "%.2f", $cartTotal ), 2, '.', '' ),
-      'item_name' => $result["title"],
+      'item_name' => $result["title"] . $discountText,
       'item_description' => $result["including"],
       'custom_int1' => '2121',
       'custom_str1' => 'Instaplan Payment'
@@ -81,7 +92,7 @@
           <h1 class="text-center">Checkout</h1>
           <hr>
 
-          <p class="text-center mb-5">
+          <p class="text-center mb-4">
             You will be redirected to the PayFast payment gateway to complete the
             transaction, please make sure to enter the correct contact information.
             Your design files will be sent to you via email shortly after your payment
@@ -99,7 +110,11 @@
           <hr>
           -->
 
-          <h2 class="text-center">R <?php echo $data['amount']; ?></h2>
+          <?php if ($discount == true) : ?>
+            <p class="text-muted text-center m-0 p-0">was R<?php echo $originalAmount; ?></p>
+          <?php endif; ?>
+          <h2 class="text-center mb-3">R<?php echo $data['amount']; ?></h2>
+
           <label class="d-block text-center text-muted"><?php echo $data['item_name']; ?></label>
           <p class="text-center text-muted">
             <strong>Including:</strong> <?php echo $data['item_description']; ?>
@@ -122,6 +137,19 @@
             $htmlForm .= '<input id="accepted" class="btn btn-block btn-outline-secondary mt-2" type="submit" value="Pay Now" disabled /></form>';
             echo $htmlForm;
           ?>
+
+          <?php if ($discount == true) : ?>
+            <p class="mt-5 p-4 text-center border shadow">
+              <strong>Dear Client</strong> <br><br>
+              As you will be the first to purchase this House Plan/Design, you will enjoy the benefit of a
+              15% discount. Please note that this House Plan/Design will be processed and
+              delivered once completed. Please allow at least a three week lead time. If you
+              do not wish to utilize the discount in lieu of receiving your House Plan/Design
+              immediately, kindly browse any other design which may be ready for delivery
+              immediately (these House Plans/Designs unfortunately do not qualify for
+              discount). Thank you.
+            </p>
+          <?php endif; ?>
 
         </div>
         <div class="col-md-3"></div>
