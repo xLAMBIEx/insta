@@ -303,6 +303,7 @@ $(document).ready(function () {
 		let contactName = $("#contactRequestName").val();
 		let contactMail = $("#contactRequestEmail").val();
 		let contactMesg = $("#contactRequestMessage").val();
+		let recaptcha = $("input[data-recaptcha]").val();
 
 		$.ajax({
 			url: "server/contacts/addContact.php",
@@ -311,6 +312,7 @@ $(document).ready(function () {
 				contactName: contactName,
 				contactMail: contactMail,
 				contactMesg: contactMesg,
+				recaptcha: recaptcha,
 			},
 			success: function (res) {
 				console.log(res);

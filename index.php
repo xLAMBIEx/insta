@@ -441,6 +441,8 @@
             </div>
 
             <form id="contactRequestForm">
+              <div class="messages"></div>
+
               <div class="form-group">
                 <label for="contactRequestName">Name</label>
                 <input type="email" class="form-control" id="contactRequestName" placeholder="">
@@ -453,6 +455,12 @@
                 <label for="contactRequestMessage">Message</label>
                 <textarea class="form-control" id="contactRequestMessage" rows="5" placeholder=""></textarea>
               </div>
+              <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfAVwEVAAAAAFrTLUHGizmDtUWe0uWnAiI_tIDW" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                  <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                  <div class="help-block with-errors"></div>
+              </div>
+              <!-- <input type="submit" class="btn btn-block btn-dark btn-send" value="Send Message"> -->
             </form>
           </div>
           <div class="modal-footer">
@@ -486,6 +494,8 @@
     <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <!-- Google ReCaptcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- Main JS Link -->
     <script>var homepage = true;</script>
     <script src="scripts/main.js"></script>
@@ -500,6 +510,44 @@
         }, 1000);
 
       }, false);
+    </script>
+
+    <!-- -->
+    <script>
+      $(function () {
+
+        window.verifyRecaptchaCallback = function (response) {
+            $('input[data-recaptcha]').val(response).trigger('change')
+        }
+
+        window.expiredRecaptchaCallback = function () {
+            $('input[data-recaptcha]').val("").trigger('change')
+        }
+
+        // $('#contact-form').on('submit', function (e) {
+        //     if (!e.isDefaultPrevented()) {
+        //         var url = "contact.php";
+
+        //         $.ajax({
+        //             type: "POST",
+        //             url: url,
+        //             data: $(this).serialize(),
+        //             success: function (data) {
+        //                 var messageAlert = 'alert-' + data.type;
+        //                 var messageText = data.message;
+
+        //                 var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+        //                 if (messageAlert && messageText) {
+        //                     $('#contact-form').find('.messages').html(alertBox);
+        //                     $('#contact-form')[0].reset();
+        //                     grecaptcha.reset();
+        //                 }
+        //             }
+        //         });
+        //         return false;
+        //     }
+        // })
+      });
     </script>
   </body>
 </html>
