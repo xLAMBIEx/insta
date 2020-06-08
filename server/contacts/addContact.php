@@ -63,6 +63,12 @@
               $mail->setFrom('noreply@instaplan.co.za', 'Instaplan');
 
               $mail->addAddress('support@instaplan.co.za', 'Support');
+              $mail->addAddress('dominic@allaboutcloud.co.za', 'Dominic');
+              $mail->addAddress('jurgen@allaboutcloud.co.za', 'Jurgen');
+              $mail->addAddress('martin@allaboutcloud.co.za', 'Martin');
+              $mail->addAddress('info@jkdesigns.co.za', 'Info');
+              $mail->addAddress('dwayne@jkdesigns.co.za', 'Dwayne');
+              $mail->addAddress('johann@jkdesigns.co.za', 'Johann');
 
               // $query = "SELECT * FROM users";
               // $admins = $db->query($query);
