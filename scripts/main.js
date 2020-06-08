@@ -185,6 +185,7 @@ $(document).ready(function () {
 		$("#addDesignWidth").val("");
 		$("#addDesignDepth").val("");
 		$("#addDesignPrice").val("");
+		$("#addDesignDiscount").val("");
 		$("#addDesignFeaturedImage").text("");
 		$("#uploadFeaturedImage").val("");
 		$("#addDesignGalleryImage1").text("");
@@ -223,6 +224,7 @@ $(document).ready(function () {
 		$("#addDesignWidth").val("");
 		$("#addDesignDepth").val("");
 		$("#addDesignPrice").val("");
+		$("#addDesignDiscount").val("");
 		$("#addDesignFeaturedImage").text("");
 		$("#uploadFeaturedImage").val("");
 		$("#addDesignGalleryImage1").text("");
@@ -531,6 +533,7 @@ function addDesign() {
 	let width = $("#addDesignWidth").val();
 	let depth = $("#addDesignDepth").val();
 	let price = $("#addDesignPrice").val();
+	let discount = $("#addDesignDiscount").val();
 	let featuredImage = $("#addDesignFeaturedImage").text();
 	let image1 = $("#addDesignGalleryImage1").text();
 	let image2 = $("#addDesignGalleryImage2").text();
@@ -555,6 +558,7 @@ function addDesign() {
 			width: width,
 			depth: depth,
 			price: price,
+			discount: discount,
 			featuredImage: featuredImage,
 			image1: image1,
 			image2: image2,
@@ -577,6 +581,7 @@ function addDesign() {
 				$("#addDesignWidth").val("");
 				$("#addDesignDepth").val("");
 				$("#addDesignPrice").val("");
+				$("#addDesignDiscount").val("");
 				$("#addDesignFeaturedImage").text("");
 				$("#uploadFeaturedImage").val("");
 				$("#addDesignGalleryImage1").text("");
@@ -651,6 +656,7 @@ function getAdminDesignDetails(id) {
 			$("#addDesignWidth").val(res.width);
 			$("#addDesignDepth").val(res.depth);
 			$("#addDesignPrice").val(res.price);
+			$("#addDesignDiscount").val(res.discount);
 			$("#addDesignFeaturedImage").text(res.featuredImage);
 			$("#addDesignGalleryImage1").text(res.image1);
 			$("#addDesignGalleryImage2").text(res.image2);
@@ -692,6 +698,7 @@ function updateDesign() {
 	let width = $("#addDesignWidth").val();
 	let depth = $("#addDesignDepth").val();
 	let price = $("#addDesignPrice").val();
+	let discount = $("#addDesignDiscount").val();
 	let featuredImage = $("#addDesignFeaturedImage").text();
 	let image1 = $("#addDesignGalleryImage1").text();
 	let image2 = $("#addDesignGalleryImage2").text();
@@ -717,6 +724,7 @@ function updateDesign() {
 			width: width,
 			depth: depth,
 			price: price,
+			discount: discount,
 			featuredImage: featuredImage,
 			image1: image1,
 			image2: image2,

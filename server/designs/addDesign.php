@@ -16,6 +16,7 @@
       isset($_POST['width']) && !empty($_POST['width']) &&
       isset($_POST['depth']) && !empty($_POST['depth']) &&
       isset($_POST['price']) && !empty($_POST['price']) &&
+      isset($_POST['discount']) && !empty($_POST['discount']) &&
       isset($_POST['featuredImage']) && !empty($_POST['featuredImage']) &&
       isset($_POST['image1']) && !empty($_POST['image1']) &&
       isset($_POST['image2']) && !empty($_POST['image2']) &&
@@ -36,13 +37,14 @@
         $width = $_POST['width'];
         $depth = $_POST['depth'];
         $price = $_POST['price'];
+        $discount = $_POST['discount'];
         $featuredImage = $_POST['featuredImage'];
         $image1 = $_POST['image1'];
         $image2 = $_POST['image2'];
         $image3 = $_POST['image3'];
 
-        $stmt = $db->prepare("INSERT INTO designs(title, description, including, size, bedrooms, bathrooms, floors, garage, kitchen, lounge, dining, patio, width, depth, price, featuredImage, image1, image2, image3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssiiiiiiiiiiidssss", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $featuredImage, $image1, $image2, $image3);
+        $stmt = $db->prepare("INSERT INTO designs(title, description, including, size, bedrooms, bathrooms, floors, garage, kitchen, lounge, dining, patio, width, depth, price, discount, featuredImage, image1, image2, image3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssiiiiiiiiiiidsssss", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $discount, $featuredImage, $image1, $image2, $image3);
 
         $stmt->execute();
 

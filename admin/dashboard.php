@@ -128,6 +128,13 @@
                     <input type="text" class="form-control" id="addDesignPrice">
                   </div>
                 </div>
+                <div class="form-group">
+                  <label for="addDesignDiscount">First Purchase Discount</label>
+                  <select class="form-control" id="addDesignDiscount">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+                </div>
                 <div class="form-group mt-4">
                   <label for="uploadFeaturedImage">Featured Image</label>
                   <input type="file" class="form-control-file" id="uploadFeaturedImage">
