@@ -16,7 +16,6 @@
       isset($_POST['patio']) && !empty($_POST['patio']) &&
       isset($_POST['width']) && !empty($_POST['width']) &&
       isset($_POST['depth']) && !empty($_POST['depth']) &&
-      isset($_POST['price']) && !empty($_POST['price']) &&
       isset($_POST['discount']) && !empty($_POST['discount']) &&
       isset($_POST['featuredImage']) && !empty($_POST['featuredImage']) &&
       isset($_POST['image1']) && !empty($_POST['image1']) &&
@@ -62,11 +61,8 @@
         $image11 = $_POST['image11'];
         $image12 = $_POST['image12'];
 
-        
-        $price = 0;
-
-        $stmt = $db->prepare("UPDATE designs SET title=?, description=?, including=?, size=?, bedrooms=?, bathrooms=?, floors=?, garage=?, kitchen=?, lounge=?, dining=?, patio=?, width=?, depth=?, price=?, discount=?, featuredImage=?, image1=?, image2=?, image3=?, image4=?, image5=?, image6=?, image7=?, image8=?, image9=?, image10=?, image11=?, image12=? WHERE id=?");
-        $stmt->bind_param("sssiiiiiiiiiiidssssssssssssssi", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $discount, $featuredImage, $image1, $image2, $image3, $image4, $image5, $image6, $image7, $image8, $image9, $image10, $image11, $image12, $designId);
+        $stmt = $db->prepare("UPDATE designs SET title=?, description=?, including=?, size=?, bedrooms=?, bathrooms=?, floors=?, garage=?, kitchen=?, lounge=?, dining=?, patio=?, width=?, depth=?, discount=?, featuredImage=?, image1=?, image2=?, image3=?, image4=?, image5=?, image6=?, image7=?, image8=?, image9=?, image10=?, image11=?, image12=? WHERE id=?");
+        $stmt->bind_param("sssiiiiiiiiiiissssssssssssssi", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $discount, $featuredImage, $image1, $image2, $image3, $image4, $image5, $image6, $image7, $image8, $image9, $image10, $image11, $image12, $designId);
 
         $stmt->execute();
 
