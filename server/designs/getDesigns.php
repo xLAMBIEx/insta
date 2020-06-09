@@ -61,6 +61,20 @@
     if ($result->num_rows > 0) {
       $designs = [];
       while ($design = $result->fetch_array(MYSQLI_ASSOC)) {
+        $designSize = $design['size'];
+
+        $query = "SELECT * FROM pricing";
+        $p_result = $db->query($query);
+
+        $designPrice = 0;
+        while ($p = $p_result->fetch_array(MYSQLI_ASSOC)) {
+          if ($designSize >= $p['size'] - 300 && $designSize <= $p['size']) {
+            $designPrice = $p['price'] * $design['size'];
+          }
+        }
+        
+        $design['price'] = number_format( sprintf( "%.2f", round($designPrice, -2) ), 2, '.', '' );
+
         $designs[] = $design;
       }
       echo json_encode($designs);
@@ -74,6 +88,20 @@
     if ($result->num_rows > 0) {
       $designs = [];
       while ($design = $result->fetch_array(MYSQLI_ASSOC)) {
+        $designSize = $design['size'];
+
+        $query = "SELECT * FROM pricing";
+        $p_result = $db->query($query);
+
+        $designPrice = 0;
+        while ($p = $p_result->fetch_array(MYSQLI_ASSOC)) {
+          if ($designSize >= $p['size'] - 300 && $designSize <= $p['size']) {
+            $designPrice = $p['price'] * $design['size'];
+          }
+        }
+
+        $design['price'] = number_format( sprintf( "%.2f", round($designPrice, -2) ), 2, '.', '' );
+
         $designs[] = $design;
       }
       echo json_encode($designs);

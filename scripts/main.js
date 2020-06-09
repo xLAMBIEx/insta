@@ -363,6 +363,11 @@ $(document).ready(function () {
 		deleteDesign(id);
 	});
 
+	// Admin Dashboard - Update Pricing
+	$("#updatePricing").on("click", function () {
+		updatePricing();
+	});
+
 	// Admin Dashboard - Add User
 	$("#addUserSubmit").on("click", function () {
 		addUser();
@@ -497,9 +502,9 @@ function getFilteredDesigns() {
 							`"class="view-details"><img src="media/designs/` +
 							value.featuredImage +
 							`.jpg" class="img-fluid" alt="Design Featured Image" /></a>
-              <h3 class="text-left m-3 text-smaller">
+              <h3 class="text-left m-3 text-smaller">R
                 ` +
-							formatter.format(value.price) +
+							value.price +
 							`
                 <span class="float-right">
                   <i class="fas fa-bed"></i> ` +
@@ -592,7 +597,7 @@ function getDesignDetails(id) {
 				);
 
 				$("#designDetailsTitle").text(res.title);
-				$("#designDetailsPrice").text(formatter.format(res.price));
+				$("#designDetailsPrice").text("R" + res.price);
 				$("#designDetailsDescription").text(res.description);
 
 				$("#designDetailsSize").text(res.size + "m²");
@@ -1012,6 +1017,53 @@ function deleteDesign(id) {
 		},
 		error: function (err) {
 			console.log(err);
+		},
+	});
+}
+
+// Admin Dashboard - Populate Pricing Fields
+function getPricing() {
+	$.ajax({
+		url: "../server/pricing/getPricing.php",
+		type: "get",
+		success: function (res) {
+			if (res !== "No Results") {
+				res = JSON.parse(res);
+
+				res.forEach(function (value) {
+					$("#price" + value.size).val(value.price);
+				});
+			}
+		},
+		error: function () {
+			console.log("Error: Get Pricing");
+		},
+	});
+}
+
+// Admin Dashboard - Update Pricing
+function updatePricing() {
+	const price300 = $("#price300").val();
+	const price600 = $("#price600").val();
+	const price900 = $("#price900").val();
+
+	$.ajax({
+		url: "../server/pricing/updatePricing.php",
+		type: "post",
+		data: {
+			price300: price300,
+			price600: price600,
+			price900: price900,
+		},
+		success: function (res) {
+			if (res === "Pricing Updated") {
+				alert(res);
+			} else {
+				alert("Updating Pricing Failed: one or more fields are empty");
+			}
+		},
+		error: function (err) {
+			console.log("Error: Update Price - " + err);
 		},
 	});
 }

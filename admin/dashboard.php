@@ -27,6 +27,7 @@
         <div class="col-md-3">
           <div class="dashboard-menu nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link active" id="v-pills-designs-tab" data-toggle="pill" href="#v-pills-designs" role="tab" aria-controls="v-pills-statistics" aria-selected="true">Designs Manager</a>
+            <a class="nav-link" id="v-pills-price-tab" data-toggle="pill" href="#v-pills-price" role="tab" aria-controls="v-pills-price" aria-selected="false">Pricing</a>
             <a class="nav-link" id="v-pills-payments-tab" data-toggle="pill" href="#v-pills-payments" role="tab" aria-controls="v-pills-requests" aria-selected="false">Payment History</a>
             <a class="nav-link" id="v-pills-contacts-tab" data-toggle="pill" href="#v-pills-contacts" role="tab" aria-controls="v-pills-search" aria-selected="false">Contact Requests</a>
             <a class="nav-link" id="v-pills-users-tab" data-toggle="pill" href="#v-pills-users" role="tab" aria-controls="v-pills-listing" aria-selected="false">Users Manager</a>
@@ -40,6 +41,7 @@
             <div class="dropdown-menu w-100 text-center text-secondary nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" aria-labelledby="dropdownMenu2">
               <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active" id="v-pills-designs-tab" data-toggle="pill" href="#v-pills-designs" role="tab" aria-controls="v-pills-statistics" aria-selected="true">Designs Manager</a>
+                <a class="nav-link" id="v-pills-price-tab" data-toggle="pill" href="#v-pills-price" role="tab" aria-controls="v-pills-price" aria-selected="false">Pricing</a>
                 <a class="nav-link" id="v-pills-payments-tab" data-toggle="pill" href="#v-pills-payments" role="tab" aria-controls="v-pills-requests" aria-selected="false">Payment History</a>
                 <a class="nav-link" id="v-pills-contacts-tab" data-toggle="pill" href="#v-pills-contacts" role="tab" aria-controls="v-pills-payment" aria-selected="false">Contact Request</a>
                 <a class="nav-link" id="v-pills-users-tab" data-toggle="pill" href="#v-pills-users" role="tab" aria-controls="v-pills-listing" aria-selected="false">Users Manager</a>
@@ -124,16 +126,12 @@
                     <input type="text" class="form-control" id="addDesignDepth">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="addDesignPrice">Price</label>
-                    <input type="text" class="form-control" id="addDesignPrice">
-                  </div>
-                </div>
-                <div class="form-group">
                   <label for="addDesignDiscount">First Purchase Discount</label>
                   <select class="form-control" id="addDesignDiscount">
                     <option value="no">No</option>
                     <option value="yes">Yes</option>
                   </select>
+                </div>
                 </div>
                 <div class="form-group mt-4">
                   <label for="uploadFeaturedImage">Featured Image</label>
@@ -247,6 +245,27 @@
                 </table>
               </div>
             </div>
+            <div class="tab-pane fade" id="v-pills-price" role="tabpanel" aria-labelledby="v-pills-price-tab">
+              <h2 class="text-center">Pricing</h2>
+              <hr>
+              
+              <h4 class="mb-4">Update Pricing</h4>
+              <form>
+                <div class="form-group">
+                  <label for="price300">R per m² (0m² - 300m²)</label>
+                  <input type="text" class="form-control" id="price300">
+                </div>
+                <div class="form-group">
+                  <label for="price600">R per m² (300m² - 600m²)</label>
+                  <input type="text" class="form-control" id="price600">
+                </div>
+                <div class="form-group">
+                  <label for="price900">R per m² (600m² - 900m²)</label>
+                  <input type="text" class="form-control" id="price900">
+                </div>
+              </form>
+              <button type="button" id="updatePricing" class="btn btn-block btn-secondary">Update</button>
+            </div>
             <div class="tab-pane fade" id="v-pills-payments" role="tabpanel" aria-labelledby="v-pills-payments-tab">
               <h2 class="text-center">Payment History</h2>
               <hr>
@@ -355,6 +374,7 @@
         }
 
         getDesigns();
+        getPricing();
         getPayments();
         getContacts();
         getUsers();

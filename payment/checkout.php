@@ -15,6 +15,20 @@
 
   if ($result->num_rows === 1) {
     $result = $result->fetch_assoc();
+
+    $designSize = $result['size'];
+
+    $query = "SELECT * FROM pricing";
+    $p_result = $db->query($query);
+
+    $designPrice = 0;
+    while ($p = $p_result->fetch_array(MYSQLI_ASSOC)) {
+      if ($designSize >= $p['size'] - 300 && $designSize <= $p['size']) {
+        $designPrice = $p['price'] * $result['size'];
+      }
+    }
+
+    $result['price'] = round($designPrice, -2);
   } else {
     header('Location: ../index.php');
   }

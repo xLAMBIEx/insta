@@ -15,7 +15,6 @@
       isset($_POST['patio']) && !empty($_POST['patio']) &&
       isset($_POST['width']) && !empty($_POST['width']) &&
       isset($_POST['depth']) && !empty($_POST['depth']) &&
-      isset($_POST['price']) && !empty($_POST['price']) &&
       isset($_POST['discount']) && !empty($_POST['discount']) &&
       isset($_POST['featuredImage']) && !empty($_POST['featuredImage']) &&
       isset($_POST['image1']) && !empty($_POST['image1']) &&
@@ -45,7 +44,7 @@
         $patio = $_POST['patio'];
         $width = $_POST['width'];
         $depth = $_POST['depth'];
-        $price = $_POST['price'];
+        $price = 0;
         $discount = $_POST['discount'];
         $featuredImage = $_POST['featuredImage'];
         $image1 = $_POST['image1'];
