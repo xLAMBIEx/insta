@@ -47,7 +47,6 @@
         $patio = $_POST['patio'];
         $width = $_POST['width'];
         $depth = $_POST['depth'];
-        $price = $_POST['price'];
         $discount = $_POST['discount'];
         $featuredImage = $_POST['featuredImage'];
         $image1 = $_POST['image1'];
@@ -62,6 +61,9 @@
         $image10 = $_POST['image10'];
         $image11 = $_POST['image11'];
         $image12 = $_POST['image12'];
+
+        
+        $price = 0;
 
         $stmt = $db->prepare("UPDATE designs SET title=?, description=?, including=?, size=?, bedrooms=?, bathrooms=?, floors=?, garage=?, kitchen=?, lounge=?, dining=?, patio=?, width=?, depth=?, price=?, discount=?, featuredImage=?, image1=?, image2=?, image3=?, image4=?, image5=?, image6=?, image7=?, image8=?, image9=?, image10=?, image11=?, image12=? WHERE id=?");
         $stmt->bind_param("sssiiiiiiiiiiidssssssssssssssi", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $discount, $featuredImage, $image1, $image2, $image3, $image4, $image5, $image6, $image7, $image8, $image9, $image10, $image11, $image12, $designId);
