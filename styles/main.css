@@ -249,3 +249,14 @@ body {
 		display: block !important;
 	}
 }
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+	width: 50px !important;
+	height: 50px !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+	opacity: 1 !important;
+}
