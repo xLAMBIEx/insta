@@ -311,9 +311,9 @@
             </button>
           </div>
           <div class="modal-body p-2">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="hover">
+            <div id="carouselExampleIndicators" class="carousel slide">
               <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
@@ -324,10 +324,10 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="11"></li> -->
               </ol>
               <div class="carousel-inner">
-                <div class="carousel-item active">
+                <!-- <div class="carousel-item active">
                   <img id="designDetailsGalleryImage1" src="" class="d-block w-100" alt="Design Gallery Image 1">
                 </div>
                 <div class="carousel-item">
@@ -362,7 +362,7 @@
                 </div>
                 <div class="carousel-item">
                   <img id="designDetailsGalleryImage12" src="" class="d-block w-100" alt="Design Gallery Image 12">
-                </div>
+                </div> -->
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

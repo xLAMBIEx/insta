@@ -547,54 +547,353 @@ function getDesignDetails(id) {
 			if (res !== "No Results" && res !== "Invalid Parameter") {
 				res = JSON.parse(res);
 
-				$("#designDetailsGalleryImage1").attr(
-					"src",
-					"media/designs/" + res.image1 + ".jpg"
-				);
-				$("#designDetailsGalleryImage2").attr(
-					"src",
-					"media/designs/" + res.image2 + ".jpg"
-				);
-				$("#designDetailsGalleryImage3").attr(
-					"src",
-					"media/designs/" + res.image3 + ".jpg"
-				);
-				$("#designDetailsGalleryImage4").attr(
-					"src",
-					"media/designs/" + res.image4 + ".jpg"
-				);
-				$("#designDetailsGalleryImage5").attr(
-					"src",
-					"media/designs/" + res.image5 + ".jpg"
-				);
-				$("#designDetailsGalleryImage6").attr(
-					"src",
-					"media/designs/" + res.image6 + ".jpg"
-				);
-				$("#designDetailsGalleryImage7").attr(
-					"src",
-					"media/designs/" + res.image7 + ".jpg"
-				);
-				$("#designDetailsGalleryImage8").attr(
-					"src",
-					"media/designs/" + res.image8 + ".jpg"
-				);
-				$("#designDetailsGalleryImage9").attr(
-					"src",
-					"media/designs/" + res.image9 + ".jpg"
-				);
-				$("#designDetailsGalleryImage10").attr(
-					"src",
-					"media/designs/" + res.image10 + ".jpg"
-				);
-				$("#designDetailsGalleryImage11").attr(
-					"src",
-					"media/designs/" + res.image11 + ".jpg"
-				);
-				$("#designDetailsGalleryImage12").attr(
-					"src",
-					"media/designs/" + res.image12 + ".jpg"
-				);
+				$(".carousel-item").each(function () {
+					$(this).remove();
+				});
+
+				$(".carousel-indicators-item").each(function () {
+					$(this).remove();
+				});
+
+				let indicatorCounter = 0;
+
+				if (res.image1 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item active">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image1 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							1 +
+							`" src="media/designs/` +
+							res.image1 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 1">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="active carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image2 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image2 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							2 +
+							`" src="media/designs/` +
+							res.image2 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 2">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image3 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image3 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							3 +
+							`" src="media/designs/` +
+							res.image3 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 3">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image4 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image4 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							4 +
+							`" src="media/designs/` +
+							res.image4 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 4">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image5 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image5 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							5 +
+							`" src="media/designs/` +
+							res.image5 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 5">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image6 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image6 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							6 +
+							`" src="media/designs/` +
+							res.image6 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 6">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image7 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image7 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							7 +
+							`" src="media/designs/` +
+							res.image7 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 7">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image8 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image8 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							8 +
+							`" src="media/designs/` +
+							res.image8 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 8">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image9 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image9 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							9 +
+							`" src="media/designs/` +
+							res.image9 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 9">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image10 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image10 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							10 +
+							`" src="media/designs/` +
+							res.image10 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 10">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image11 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image11 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							11 +
+							`" src="media/designs/` +
+							res.image11 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 11">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				if (res.image12 !== "") {
+					$(".carousel-inner").append(
+						`
+					<div class="carousel-item">
+					<a href="https://instaplan.co.za/media/designs/` +
+							res.image12 +
+							`.jpg" target="_blank">
+						<img id="designDetailsGalleryImage` +
+							12 +
+							`" src="media/designs/` +
+							res.image12 +
+							`.jpg" class="d-block w-100" alt="Design Gallery Image 12">
+							</a>
+				  	</div>
+					`
+					);
+
+					$(".carousel-indicators").append(
+						`
+						<li class="carousel-indicators-item" data-target="#carouselExampleIndicators" data-slide-to="` +
+							indicatorCounter +
+							`"></li>
+					`
+					);
+
+					indicatorCounter++;
+				}
+
+				// TODO: Set carousel to first slide
 
 				$("#designDetailsTitle").text(res.title);
 				$("#designDetailsPrice").text("R" + res.price);
