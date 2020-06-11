@@ -31,7 +31,7 @@
             The transaction has been canceled and you will unfortunitly not be
             receiving the plans to your dream house. Should you have any questions
             or concerns please feel free to contact us at
-            <a href="mailto:info@instaplan.co.za">info@instaplan.co.za</a> for
+            <a href="mailto:support@instaplan.co.za">support@instaplan.co.za</a> for
             further assistance.
           </p>
 
