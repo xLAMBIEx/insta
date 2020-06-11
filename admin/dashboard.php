@@ -67,6 +67,10 @@
                   <textarea class="form-control" id="addDesignDescription" rows="4" cols="40"></textarea>
                 </div>
                 <div class="form-group">
+                  <label for="addDesignAdditional">Additional Information</label>
+                  <textarea class="form-control" id="addDesignAdditional" rows="8" cols="40"></textarea>
+                </div>
+                <div class="form-group">
                   <label for="addDesignIncluding">Including</label>
                   <textarea class="form-control" id="addDesignIncluding" rows="2" cols="40"></textarea>
                 </div>

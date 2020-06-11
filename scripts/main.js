@@ -236,6 +236,7 @@ $(document).ready(function () {
 		$("#addDesignTitle").val("");
 		$("#addDesignDescription").val("");
 		$("#addDesignIncluding").val("");
+		$("#addDesignAdditional").val("");
 		$("#addDesignSize").val("");
 		$("#addDesignBedrooms").val("");
 		$("#addDesignBathrooms").val("");
@@ -302,6 +303,7 @@ $(document).ready(function () {
 		$("#addDesignTitle").val("");
 		$("#addDesignDescription").val("");
 		$("#addDesignIncluding").val("");
+		$("#addDesignAdditional").val("");
 		$("#addDesignSize").val("");
 		$("#addDesignBedrooms").val("");
 		$("#addDesignBathrooms").val("");
@@ -909,6 +911,8 @@ function getDesignDetails(id) {
 				$("#designDetailsDining").text(res.dining);
 				$("#designDetailsPatio").text(res.patio);
 
+				$("#designDetailsAdditional").html(res.additionalInfo);
+
 				$("#designDetailsIncluding").html(
 					"<strong>Including:</strong> " + res.including
 				);
@@ -980,6 +984,7 @@ function addDesign() {
 	let title = $("#addDesignTitle").val();
 	let description = $("#addDesignDescription").val();
 	let including = $("#addDesignIncluding").val();
+	let additional = $("#addDesignAdditional").val();
 	let size = $("#addDesignSize").val();
 	let bedrooms = $("#addDesignBedrooms").val();
 	let bathrooms = $("#addDesignBathrooms").val();
@@ -1014,6 +1019,7 @@ function addDesign() {
 			title: title,
 			description: description,
 			including: including,
+			additional: additional,
 			size: size,
 			bedrooms: bedrooms,
 			bathrooms: bathrooms,
@@ -1046,6 +1052,7 @@ function addDesign() {
 				$("#addDesignTitle").val("");
 				$("#addDesignDescription").val("");
 				$("#addDesignIncluding").val("");
+				$("#addDesignAdditional").val("");
 				$("#addDesignSize").val("");
 				$("#addDesignBedrooms").val("");
 				$("#addDesignBathrooms").val("");
@@ -1148,6 +1155,7 @@ function getAdminDesignDetails(id) {
 			$("#addDesignTitle").val(res.title);
 			$("#addDesignDescription").val(res.description);
 			$("#addDesignIncluding").val(res.including);
+			$("#addDesignAdditional").val(res.additionalInfo);
 			$("#addDesignSize").val(res.size);
 			$("#addDesignBedrooms").val(res.bedrooms);
 			$("#addDesignBathrooms").val(res.bathrooms);
@@ -1227,6 +1235,7 @@ function updateDesign() {
 	let title = $("#addDesignTitle").val();
 	let description = $("#addDesignDescription").val();
 	let including = $("#addDesignIncluding").val();
+	let additional = $("#addDesignAdditional").val();
 	let size = $("#addDesignSize").val();
 	let bedrooms = $("#addDesignBedrooms").val();
 	let bathrooms = $("#addDesignBathrooms").val();
@@ -1262,6 +1271,7 @@ function updateDesign() {
 			title: title,
 			description: description,
 			including: including,
+			additional: additional,
 			size: size,
 			bedrooms: bedrooms,
 			bathrooms: bathrooms,

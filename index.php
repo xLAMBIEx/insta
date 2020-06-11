@@ -383,7 +383,6 @@
             </p>
 
             <table class="table table-bordered">
-              <caption class="text-center">Additional Information</caption>
               <tbody>
                   <tr>
                   <th>Size</th>
@@ -441,6 +440,11 @@
                 </tr>
               </tbody>
             </table>
+            
+            <h3 class="text-center text-mute mt-4 mb-2">Additional Information</h3>
+            <p id="designDetailsAdditional" class="text-center mt-4 mb-5">
+              <!-- AJAX Placeholder -->
+            </p>
 
             <p id="designDetailsIncluding" class="text-center mt-4 mb-5">
               <!-- AJAX Placeholder -->

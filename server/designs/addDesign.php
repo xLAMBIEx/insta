@@ -4,6 +4,7 @@
   if (isset($_POST['title']) && !empty($_POST['title']) &&
       isset($_POST['description']) && !empty($_POST['description']) &&
       isset($_POST['including']) && !empty($_POST['including']) &&
+      isset($_POST['additional']) && !empty($_POST['additional']) &&
       isset($_POST['size']) && !empty($_POST['size']) &&
       isset($_POST['bedrooms']) && !empty($_POST['bedrooms']) &&
       isset($_POST['bathrooms']) && !empty($_POST['bathrooms']) &&
@@ -21,6 +22,7 @@
         $title = $_POST['title'];
         $description = $_POST['description'];
         $including = $_POST['including'];
+        $additional = $_POST['additional'];
         $size = $_POST['size'];
         $bedrooms = $_POST['bedrooms'];
         $bathrooms = $_POST['bathrooms'];
@@ -108,8 +110,8 @@
           $image12 = '';
         }
 
-        $stmt = $db->prepare("INSERT INTO designs(title, description, including, size, bedrooms, bathrooms, floors, garage, kitchen, lounge, dining, patio, width, depth, price, discount, featuredImage, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssiiiiiiiiiiidssssssssssssss", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $discount, $featuredImage, $image1, $image2, $image3, $image4, $image5, $image6, $image7, $image8, $image9, $image10, $image11, $image12);
+        $stmt = $db->prepare("INSERT INTO designs(title, description, additionalInfo, including, size, bedrooms, bathrooms, floors, garage, kitchen, lounge, dining, patio, width, depth, price, discount, featuredImage, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssiiiiiiiiiiidssssssssssssss", $title, $description, $additional, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $price, $discount, $featuredImage, $image1, $image2, $image3, $image4, $image5, $image6, $image7, $image8, $image9, $image10, $image11, $image12);
 
         $stmt->execute();
 

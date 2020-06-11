@@ -5,6 +5,7 @@
       isset($_POST['title']) && !empty($_POST['title']) &&
       isset($_POST['description']) && !empty($_POST['description']) &&
       isset($_POST['including']) && !empty($_POST['including']) &&
+      isset($_POST['additional']) && !empty($_POST['additional']) &&
       isset($_POST['size']) && !empty($_POST['size']) &&
       isset($_POST['bedrooms']) && !empty($_POST['bedrooms']) &&
       isset($_POST['bathrooms']) && !empty($_POST['bathrooms']) &&
@@ -23,6 +24,7 @@
         $title = $_POST['title'];
         $description = $_POST['description'];
         $including = $_POST['including'];
+        $additional = $_POST['additional'];
         $size = $_POST['size'];
         $bedrooms = $_POST['bedrooms'];
         $bathrooms = $_POST['bathrooms'];
@@ -109,8 +111,8 @@
           $image12 = '';
         }
 
-        $stmt = $db->prepare("UPDATE designs SET title=?, description=?, including=?, size=?, bedrooms=?, bathrooms=?, floors=?, garage=?, kitchen=?, lounge=?, dining=?, patio=?, width=?, depth=?, discount=?, featuredImage=?, image1=?, image2=?, image3=?, image4=?, image5=?, image6=?, image7=?, image8=?, image9=?, image10=?, image11=?, image12=? WHERE id=?");
-        $stmt->bind_param("sssiiiiiiiiiiissssssssssssssi", $title, $description, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $discount, $featuredImage, $image1, $image2, $image3, $image4, $image5, $image6, $image7, $image8, $image9, $image10, $image11, $image12, $designId);
+        $stmt = $db->prepare("UPDATE designs SET title=?, description=?, additionalInfo=?, including=?, size=?, bedrooms=?, bathrooms=?, floors=?, garage=?, kitchen=?, lounge=?, dining=?, patio=?, width=?, depth=?, discount=?, featuredImage=?, image1=?, image2=?, image3=?, image4=?, image5=?, image6=?, image7=?, image8=?, image9=?, image10=?, image11=?, image12=? WHERE id=?");
+        $stmt->bind_param("ssssiiiiiiiiiiissssssssssssssi", $title, $description, $additional, $including, $size, $bedrooms, $bathrooms, $floors, $garage, $kitchen, $lounge, $dining, $patio, $width, $depth, $discount, $featuredImage, $image1, $image2, $image3, $image4, $image5, $image6, $image7, $image8, $image9, $image10, $image11, $image12, $designId);
 
         $stmt->execute();
 
