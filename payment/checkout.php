@@ -137,7 +137,7 @@
 
           <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="acceptCheckbox">
-            <label class="form-check-label" for="acceptCheckbox">Accept Terms and Conditions, Privacy Policy and Refund Policy</label>
+            <label class="form-check-label" for="acceptCheckbox">Accept <a href="https://www.instaplan.co.za/legal/cookies-policy.php" target="_blank">Terms and Conditions</a>, <a href="https://www.instaplan.co.za/legal/privacy-policy.php" target="_blank">Privacy Policy</a> and <a href="https://www.instaplan.co.za/legal/refund-and-exchange-policy.php" target="_blank">Refund Policy</a>.</label>
           </div>
 
           <?php
